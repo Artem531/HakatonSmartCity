@@ -1,4 +1,4 @@
-name: Newenv3-gpu
+name: env3-gpu
 channels:
   - menpo
   - conda-forge
