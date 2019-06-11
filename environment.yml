@@ -162,5 +162,3 @@ dependencies:
     - urllib3==1.24.1
     - virtualenv==16.6.0
     - wget==3.2
-prefix: H:\Anaconda3\envs\env3-gpu
-
