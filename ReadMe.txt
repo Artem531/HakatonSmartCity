@@ -17,8 +17,12 @@ https://yadi.sk/d/Iywdjezjp5nttQ
 1) в консоли анаконды перейти в папку с people_counter.py (Командой "cd путь")
 2) активировать окружение env3-gpu с установленными библиотеками (Командой "Conda activate env3-gpu")
 3) запустить алгоритм командой ниже:
+
+Для обработки видео
 python car_counter.py --input videos/Novgorod_2019-04-05-15_15_00.mp4 --output output/result.avi
 
+Для обработки видео web-камеры в режиме online 
+python car_counter.py --output output/result.avi
 
 
 
