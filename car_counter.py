@@ -174,34 +174,7 @@ def selectCars(detections, scores, labels, frame, image, args, ct, switchModKey,
 			trackers.append(tracker)
 		# if doesn't find anything and img is dark try detect light 
 	else :
-		skipFrames = 2
-		#turn darkmod
-		if (switchModKey != 1):
-			ct.setMaxDistance(100)
-			stepLine = args["stepLine"] / 2
-			ct.maxDisappeared = 1
-			switchModKey = 1
-		image, detections, key = lightDetector(np.asarray(image))
-		print(detections)
-		#cv2.imshow("Image", image)
-		frame = image
-		# if find headlight try detect
-		if (key == 0):
-			for (i, c) in enumerate(detections):
-				print(i)
-				(x, y, w, h) = cv2.boundingRect(c)
-				tracker = dlib.correlation_tracker()
-				startX = x
-				startY = y
-				endX = x + w
-				endY = y + h
-				
-				rect = dlib.rectangle(int(startX), int(startY), int(endX), int(endY))
-				tracker.start_track(rgb, rect)
-
-				# add the tracker to our list of trackers so we can
-				# utilize it during skip frames
-				trackers.append(tracker)
+		return trackers, frame, image, 0, 0, 0, 0
 	return trackers, frame, image, startX, startY, endX, endY
 
 	
