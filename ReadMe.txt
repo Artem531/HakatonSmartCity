@@ -32,6 +32,20 @@ python car_counter.py --input videos/Novgorod_2019-04-05-15_15_00.mp4 --output o
 Для обработки видео web-камеры в режиме online 
 python car_counter.py --output output/result.avi
 
-
+Список аргументов:
+ap.add_argument("-i", "--input", type=str,
+	help="path to optional input video file")
+ap.add_argument("-o", "--output", type=str,
+	help="path to optional output video file")
+ap.add_argument("-c", "--confidence", type=float, default=0.5,
+	help="minimum probability to filter weak detections")
+ap.add_argument("-s", "--skip-frames", type=int, default=5,
+	help="# of skip frames between detections")
+ap.add_argument("-a", "--alternative", type=int, default=0,
+	help="# of skip frames between detections")
+ap.add_argument("-l", "--stepLine", type=int, default=100,
+	help="# difference between to lines")
+ap.add_argument("-sh", "--shift", type=int, default=0,
+	help="# shift of lines")
 
 
