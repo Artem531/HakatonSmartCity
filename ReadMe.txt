@@ -54,5 +54,3 @@ ap.add_argument("-l", "--stepLine", type=int, default=100,
 Сдвиг линий вверх/вниз
 ap.add_argument("-sh", "--shift", type=int, default=0,
 	help="# shift of lines")
-
-
