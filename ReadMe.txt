@@ -32,6 +32,8 @@ python car_counter.py --input videos/Novgorod_2019-04-05-15_15_00.mp4 --output o
 Для обработки видео web-камеры в режиме online 
 python car_counter.py --output output/result.avi
 
+Важно! Чтобы прервать работу программы нажмите "q"
+
 Список аргументов:
 1) Путь к видео
 ap.add_argument("-i", "--input", type=str,
