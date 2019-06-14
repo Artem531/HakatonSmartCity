@@ -99,5 +99,3 @@ dependencies:
   - pip:
     - imutils==0.5.2
     - wget==3.2
-prefix: H:\Anaconda3\envs\env1-gpu
-
